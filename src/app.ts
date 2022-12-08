@@ -7,14 +7,15 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //public routes
+app.get("/", (req, res) => {
+    res.send({ online: true })
+})
 app.use(usersRoute);
 
 app.use(authMiddleware);
 //private routes
 app.use('/assignments', assignmentsRoute);
 
-app.get("/", (req, res) => {
-    res.send({online:true})
-})
+
 
 export default app;
