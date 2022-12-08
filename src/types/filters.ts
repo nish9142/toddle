@@ -1,0 +1,15 @@
+export enum PUBLISH_STATUS {
+  ALL = 'ALL',
+  SCHEDULED = 'SCHEDULED',
+  ONGOING = 'ONGOING',
+}
+
+export enum SUBMISSION_STATUS {
+  ALL = 'ALL',
+  PENDING = 'PENDING',
+  OVERDUE = 'OVERDUE',
+  SUBMITTED = 'SUBMITTED',
+}
+
+export const PUBLISH_STATUS_VALUES = Object.values(PUBLISH_STATUS);
+export const SUBMISSION_STATUS_VALUES = Object.values(SUBMISSION_STATUS);
