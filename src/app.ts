@@ -13,4 +13,8 @@ app.use(authMiddleware);
 //private routes
 app.use('/assignments', assignmentsRoute);
 
+app.get("/", (req, res) => {
+    res.send({online:true})
+})
+
 export default app;
